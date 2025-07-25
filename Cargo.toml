@@ -32,8 +32,9 @@ spirv-builder.workspace = true
 members = ["shaders", "shared"]
 
 [workspace.dependencies]
-spirv-builder = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "0b37696e9f5edde8fa0c1363a88e6c8cb8e6ff68", default-features = false }
-spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "0b37696e9f5edde8fa0c1363a88e6c8cb8e6ff68" }
+spirv-builder = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "20052f89d932ee88aba118488fc79393c407e61c", default-features = false }
+spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "20052f89d932ee88aba118488fc79393c407e61c" }
+libm = { version = ">=0.2.5, <=0.2.11", default-features = false }
 
 # Compile build-dependencies in release mode with
 # the same settings as regular dependencies.
