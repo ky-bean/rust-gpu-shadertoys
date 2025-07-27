@@ -26,6 +26,7 @@ pub mod playing_marble;
 pub mod protean_clouds;
 pub mod raymarching_primitives;
 pub mod seascape;
+pub mod shader_art_coding_tutorial;
 pub mod skyline;
 pub mod soft_shadow_variation;
 pub mod tileable_water_caustic;
@@ -221,6 +222,8 @@ pub fn fs(constants: &ShaderConstants, mut frag_coord: Vec2) -> Vec4 {
             mouse,
         })
         .main_image(&mut color, frag_coord),
+        28 => shader_art_coding_tutorial::Inputs { resolution, time }
+            .main_image(&mut color, frag_coord),
         _ => {}
     }
     Vec3::powf(color.truncate(), 2.2).extend(color.w)
